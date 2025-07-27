@@ -14,6 +14,11 @@ bajo1 = [[B3, E3], [E4, B3], [E4, B3]]
 bajo2 = [[GS3, CS3], [CS4, GS3], [CS4, GS3]]
 bajo3 = [[FS3, B2], [B3, FS3], [B3, FS3]]
 bajo4 = [[E3, A2], [B3, E3], [B3, E3]]
+bajo5 = [[B2, E2], [B2, E3], [B2, E3]]
+bajo6 = [[CS3, CS2], [CS4, GS3], [CS4, GS3]]
+bajo7 = [[B1, B2], [B3, FS3], [B3, FS3]]
+bajo8 = [[A1, A2], [B3, E3], [B3, E3]]
+bajo9 = [[E3, E2], [B3, GS3], [B3, GS3]]
 
 # Duraciones
 arpegio1_durations = [EN, EN, EN, QN, EN, EN, EN]
@@ -32,22 +37,74 @@ frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, 5.0])
 frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 10
 frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, QN])
 
+frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 11
+frase.addNoteList([E4, E4], [EN, 2.5])
+
+frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 12
+frase.addNoteList([E4, E4, FS4, DS4, GS4, A4, GS4, E4], [EN, EN, EN, HN, DQN, EN, QN, 3.5]) # COMPASES 12-14
+
+frase.addNote(REST, 6.0) # SILENCIO REDONDA COMPAS 15 Y SILENCIO DE BLANCA COMPAS 16
+frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, QN]) 
+frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 17
+frase.addNoteList([E4, E4], [EN, 2.5])
+
+frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 18
+frase.addNoteList([E4, E4, GS4, GS4, FS4, GS4, E4, E4], [EN, EN, EN, EN, EN, HN, DQN, QN])
+
+frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 20
+frase.addNoteList([E4, E4, FS4, DS4, E4, A4, GS4, FS4, E4, E4, FS4, GS4, FS4, E4], [EN, EN, EN, HN, 2.5, EN, QN, EN, EN, QN, EN, EN, EN, DHN]) # COMPAS 20 - 23
+
+frase.addNote(REST, 4.5) # SILENCIO REDONDA COMPAS 24 Y SILENCIO CORCHEA COMPAS 25
+for i in range(6): # 6 CORCEHAS E - COMPAS 25
+   frase.addNote(E4, EN)
+   
+frase.addNoteList([FS4, GS4, GS4], [EN, EN, 2.5]) # COMPAS 25 Y 26
+frase.addNote(REST, DQN)# SILENCIO NEGRA COMPAS 25 Y SILENCIO CORCHEA COMPAS 27
+for i in range(6): # 6 CORCEHAS E - COMPAS 27
+   frase.addNote(E4, EN)
+   
+frase.addNoteList([FS4], [EN]) # COMPAS 27
+
 # ----- Mano Izquierda -----
-for i in range(2):
+for i in range(2): # ACORDE E
     fraseBajo.addNoteList(bajo1, bajo1_durations)
 
-for i in range(2):
+for i in range(2): # ACORDE C#m
     fraseBajo.addNoteList(bajo2, bajo1_durations)
 
-for i in range(2):
+for i in range(2): # ACORDE B
     fraseBajo.addNoteList(bajo3, bajo1_durations)
 
-fraseBajo.addNoteList(bajo4, bajo1_durations)
+fraseBajo.addNoteList(bajo4, bajo1_durations) # ACORDE A
 fraseBajo.addChord([E3, A2], HN)
 fraseBajo.addNote(REST, HN) # SILENCIO BLANCA COMPAS 8
 
-for i in range(2): # Compas 9
+for i in range(2): # Compas 9 y 10
     fraseBajo.addNoteList(bajo1, bajo1_durations)
+    
+for i in range(2): # Compas 11 y 12
+    fraseBajo.addNoteList(bajo2, bajo1_durations)
+
+for i in range(2): # COMPAS 13 Y 14
+    fraseBajo.addNoteList(bajo3, bajo1_durations)
+    
+for i in range(2): # COMPAS 15 Y 16
+   fraseBajo.addNoteList(bajo4, bajo1_durations)
+    
+for i in range(2): # COMPAS 17 Y 18
+   fraseBajo.addNoteList(bajo5, bajo1_durations)
+   
+for i in range(2): # COMPAS 19 Y 20
+   fraseBajo.addNoteList(bajo6, bajo1_durations)
+   
+for i in range(2): # COMPAS 21 Y 22
+   fraseBajo.addNoteList(bajo7, bajo1_durations)
+   
+fraseBajo.addNoteList(bajo8, bajo1_durations) # COMPAS 23
+fraseBajo.addChord([A1, A2], WN) # COMPAS 24
+fraseBajo.addNoteList(bajo6, bajo1_durations) # COMPAS 25
+fraseBajo.addNoteList(bajo8, bajo1_durations) # COMPAS 26
+fraseBajo.addNoteList(bajo9, bajo1_durations) # COMPAS 27
 
 # Crear una Part y Score para reproducir
 part = Part("Melodía", PIANO, 0)
