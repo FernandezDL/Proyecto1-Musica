@@ -23,6 +23,8 @@ bajo10 = [[B1, B2], [B3, FS3], REST]
 bajo11 = [[A1,A2]]
 bajo12 = [[E3, E2], [B3, GS3], REST]
 bajo13 = [[B1, B2], [B2,FS3],[B2,FS3]]
+bajo14 = [[B2, B1], [B3,F3],REST]
+bajo15 = [[A1, A2],[B3, E3], REST]
 # Duraciones
 arpegio1_durations = [EN, EN, EN, QN, EN, EN, EN]
 bajo1_durations = [DQN, DQN, QN]
@@ -208,6 +210,147 @@ fraseBajo.addNoteList(bajo6, bajo1_durations)
 fraseBajo.addNoteList(bajo8, bajo1_durations)
 fraseBajo.addNoteList(bajo9, bajo1_durations)
 fraseBajo.addNoteList(bajo7, bajo1_durations)
+
+
+# --- Tercera página ---
+#primera fila 
+part4 = [GS4, GS4,FS4, FS4, E4, E4, B4, 
+         GS4, GS4,FS4, FS4, E4, E4, B4,
+         GS4, GS4,FS4, FS4, E4, E4, D4,
+         REST, E5, E5,F5,
+         [E5,GS5], B4,
+         ]
+temp4 = [EN, EN, EN, EN, EN, EN, QN,
+         EN, EN, EN, EN, EN, EN, QN,
+         EN, EN, EN, EN, EN, EN, DHN,
+         EN,EN,EN,EN,
+         HN, HN,
+        ] 
+frase.addNoteList(part4, temp4)
+
+#segunda fila
+part5 = [[E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
+           [E5,GS5],FS5, 
+           [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
+           [E5,GS5],REST,FS5,
+           [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5] 
+temp5 = [EN,EN,EN,QN,EN,EN,EN, 
+         HN,HN, 
+         EN,EN,EN,QN,EN,EN,EN, 
+         QN,QN,HN, 
+         EN,EN,EN,QN,EN,EN,2.5]
+frase.addNoteList(part5, temp5)
+
+#tercera fila
+part6 = [REST, 
+         REST, REST, E5,E5,FS5, 
+         [E5,GS5], B4, 
+         [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
+         [E5,GS5], FS5, 
+         [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5]
+temp6 = [ HN,
+         HN, EN, EN, EN, EN, 
+         HN, HN,
+         EN,EN,EN,QN,EN,EN,EN,
+         HN, HN,
+         EN,EN,EN,QN,EN,EN,EN]
+frase.addNoteList(part6, temp6)
+
+# Cuarta fila
+part7 = [[E5,GS5], REST, FS5,
+         [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5,
+         REST, 
+         E5, E5, DS5, E5, E5,
+         REST,
+         E5, E5, DS5, E5, E5
+        ]
+temp7 = [QN, QN, HN,
+         EN, EN, EN,QN,EN,EN,DHN,
+         HN,
+         EN,QN,QN,QN,EN,
+         WN,
+        EN,QN,QN,QN,EN
+        ]
+frase.addNoteList(part7, temp7)
+
+# Quinta fila
+part8 = [ REST,
+         FS5,GS5,FS5,GS5,GS5,
+         GS5, FS5, E5,
+         REST,
+         E5,E5,DS5,DS5,DS5,E5,B4,
+         E5,E5,FS5,
+         REST,E5,E5,FS5,
+         ]
+
+temp8 = [
+        WN,
+        EN, QN, QN, QN, EN,
+        DQN, SN, QN,
+        HN,
+        EN, QN, EN,SN,SN,QN,HN,
+        EN,DQN,2.5,
+        EN,EN,EN,EN
+]
+frase.addNoteList(part8, temp8)
+
+# Sexta fila
+part9 = [GS5, 
+         B4,B4,B4,B4,
+        [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
+        [E5,GS5],FS5,
+        [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
+        [E5,GS5],REST,FS5]
+
+temp9 = [HN,
+         EN,EN,EN,EN,
+         EN,EN,EN,QN,EN,EN,EN,
+         HN,HN,
+         EN,EN,EN,QN,EN,EN,EN,
+         EN,QN,HN
+        ]
+frase.addNoteList(part9, temp9)
+
+# Mano Izquierda
+fraseBajo.addNoteList(bajo6, bajo1_durations) 
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo14, bajo10_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+fraseBajo.addNoteList(bajo15, bajo10_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+
 # Crear una Part y Score para reproducir
 part = Part("Melodía", PIANO, 0)
 part.addPhrase(frase)
