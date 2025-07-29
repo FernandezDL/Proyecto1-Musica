@@ -31,179 +31,190 @@ bajo1_durations = [DQN, DQN, QN]
 bajo10_durations = [DQN, HN, EN]
 
 frase = Phrase()
-fraseBajo = Phrase()
+fraseBajo = Phrase() 
 
 # ----- Mano Derecha -----
-for i in range(7):
-    frase.addNoteList(arpegio1, arpegio1_durations)
-frase.addNote(E4, QN)
-frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 8
-frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, 5.0])
+# for i in range(7):
+#     frase.addNoteList(arpegio1, arpegio1_durations)
+# frase.addNote(E4, QN)
+# frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 8
+# frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, 5.0])
 
-frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 10
-frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, QN])
+# frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 10
+# frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, QN])
 
-frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 11
-frase.addNoteList([E4, E4], [EN, 2.5])
+# frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 11
+# frase.addNoteList([E4, E4], [EN, 2.5])
 
-frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 12
-frase.addNoteList([E4, E4, FS4, DS4, GS4, A4, GS4, E4], [EN, EN, EN, HN, DQN, EN, QN, 3.5]) # COMPASES 12-14
+# frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 12
+# frase.addNoteList([E4, E4, FS4, DS4, GS4, A4, GS4, E4], [EN, EN, EN, HN, DQN, EN, QN, 3.5]) # COMPASES 12-14
 
-frase.addNote(REST, 6.0) # SILENCIO REDONDA COMPAS 15 Y SILENCIO DE BLANCA COMPAS 16
-frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, QN]) 
-frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 17
-frase.addNoteList([E4, E4], [EN, 2.5])
+# frase.addNote(REST, 6.0) # SILENCIO REDONDA COMPAS 15 Y SILENCIO DE BLANCA COMPAS 16
+# frase.addNoteList([GS4, GS4, FS4, GS4], [EN, EN, EN, QN]) 
+# frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 17
+# frase.addNoteList([E4, E4], [EN, 2.5])
 
-frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 18
-frase.addNoteList([E4, E4, GS4, GS4, FS4, GS4, E4, E4], [EN, EN, EN, EN, EN, HN, DQN, QN])
+# frase.addNote(REST, QN) # SILENCIO NEGRA COMPAS 18
+# frase.addNoteList([E4, E4, GS4, GS4, FS4, GS4, E4, E4], [EN, EN, EN, EN, EN, HN, DQN, QN])
 
-frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 20
-frase.addNoteList([E4, E4, FS4, DS4, E4, A4, GS4, FS4, E4, E4, FS4, GS4, FS4, E4], [EN, EN, EN, HN, 2.5, EN, QN, EN, EN, QN, EN, EN, EN, DHN]) # COMPAS 20 - 23
+# frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 20
+# frase.addNoteList([E4, E4, FS4, DS4, E4, A4, GS4, FS4, E4, E4, FS4, GS4, FS4, E4], [EN, EN, EN, HN, 2.5, EN, QN, EN, EN, QN, EN, EN, EN, DHN]) # COMPAS 20 - 23
 
-frase.addNote(REST, 4.5) # SILENCIO REDONDA COMPAS 24 Y SILENCIO CORCHEA COMPAS 25
-for i in range(6): # 6 CORCEHAS E - COMPAS 25
-   frase.addNote(E4, EN)
+# frase.addNote(REST, 4.5) # SILENCIO REDONDA COMPAS 24 Y SILENCIO CORCHEA COMPAS 25
+# for i in range(6): # 6 CORCEHAS E - COMPAS 25
+#    frase.addNote(E4, EN)
    
-frase.addNoteList([FS4, GS4, GS4], [EN, EN, 2.5]) # COMPAS 25 Y 26
-frase.addNote(REST, DQN)# SILENCIO NEGRA COMPAS 25 Y SILENCIO CORCHEA COMPAS 27
-for i in range(6): # 6 CORCEHAS E - COMPAS 27
-   frase.addNote(E4, EN)
+# frase.addNoteList([FS4, GS4, GS4], [EN, EN, 2.5]) # COMPAS 25 Y 26
+# frase.addNote(REST, DQN)# SILENCIO NEGRA COMPAS 25 Y SILENCIO CORCHEA COMPAS 27
+# for i in range(6): # 6 CORCEHAS E - COMPAS 27
+#    frase.addNote(E4, EN)
    
-frase.addNoteList([FS4], [EN]) # COMPAS 27
+# frase.addNoteList([FS4], [EN]) # COMPAS 27
 
-# ----- Mano Izquierda -----
-for i in range(2): # ACORDE E
-    fraseBajo.addNoteList(bajo1, bajo1_durations)
+# # ----- Mano Izquierda -----
+# for i in range(2): # ACORDE E
+#     fraseBajo.addNoteList(bajo1, bajo1_durations)
 
-for i in range(2): # ACORDE C#m
-    fraseBajo.addNoteList(bajo2, bajo1_durations)
+# for i in range(2): # ACORDE C#m
+#     fraseBajo.addNoteList(bajo2, bajo1_durations)
 
-for i in range(2): # ACORDE B
-    fraseBajo.addNoteList(bajo3, bajo1_durations)
+# for i in range(2): # ACORDE B
+#     fraseBajo.addNoteList(bajo3, bajo1_durations)
 
-fraseBajo.addNoteList(bajo4, bajo1_durations) # ACORDE A
-fraseBajo.addChord([E3, A2], HN)
-fraseBajo.addNote(REST, HN) # SILENCIO BLANCA COMPAS 8
+# fraseBajo.addNoteList(bajo4, bajo1_durations) # ACORDE A
+# fraseBajo.addChord([E3, A2], HN)
+# fraseBajo.addNote(REST, HN) # SILENCIO BLANCA COMPAS 8
 
-for i in range(2): # Compas 9 y 10
-    fraseBajo.addNoteList(bajo1, bajo1_durations)
+# for i in range(2): # Compas 9 y 10
+#     fraseBajo.addNoteList(bajo1, bajo1_durations)
     
-for i in range(2): # Compas 11 y 12
-    fraseBajo.addNoteList(bajo2, bajo1_durations)
+# for i in range(2): # Compas 11 y 12
+#     fraseBajo.addNoteList(bajo2, bajo1_durations)
 
-for i in range(2): # COMPAS 13 Y 14
-    fraseBajo.addNoteList(bajo3, bajo1_durations)
+# for i in range(2): # COMPAS 13 Y 14
+#     fraseBajo.addNoteList(bajo3, bajo1_durations)
     
-for i in range(2): # COMPAS 15 Y 16
-   fraseBajo.addNoteList(bajo4, bajo1_durations)
+# for i in range(2): # COMPAS 15 Y 16
+#    fraseBajo.addNoteList(bajo4, bajo1_durations)
     
-for i in range(2): # COMPAS 17 Y 18
-   fraseBajo.addNoteList(bajo5, bajo1_durations)
+# for i in range(2): # COMPAS 17 Y 18
+#    fraseBajo.addNoteList(bajo5, bajo1_durations)
    
-for i in range(2): # COMPAS 19 Y 20
-   fraseBajo.addNoteList(bajo6, bajo1_durations)
+# for i in range(2): # COMPAS 19 Y 20
+#    fraseBajo.addNoteList(bajo6, bajo1_durations)
    
-for i in range(2): # COMPAS 21 Y 22
-   fraseBajo.addNoteList(bajo7, bajo1_durations)
+# for i in range(2): # COMPAS 21 Y 22
+#    fraseBajo.addNoteList(bajo7, bajo1_durations)
    
-fraseBajo.addNoteList(bajo8, bajo1_durations) # COMPAS 23
-fraseBajo.addChord([A1, A2], WN) # COMPAS 24
-fraseBajo.addNoteList(bajo6, bajo1_durations) # COMPAS 25
-fraseBajo.addNoteList(bajo8, bajo1_durations) # COMPAS 26
-fraseBajo.addNoteList(bajo9, bajo1_durations) # COMPAS 27
+# fraseBajo.addNoteList(bajo8, bajo1_durations) # COMPAS 23
+# fraseBajo.addChord([A1, A2], WN) # COMPAS 24
+# fraseBajo.addNoteList(bajo6, bajo1_durations) # COMPAS 25
+# fraseBajo.addNoteList(bajo8, bajo1_durations) # COMPAS 26
+# fraseBajo.addNoteList(bajo9, bajo1_durations) # COMPAS 27
 
 
 # --- Segunda página ---
-#primer fila
-part1 = [G4,G4,ES4,BS4, G4,G4,FS4,FS4,ES4,ES4,BS4, G4,G4,FS4,FS4,ES4,ES4,BS4, G4,G4,FS4,FS4,ES4,ES4,DS4, REST,ES5,ES5,FS5, [ES5,G5], B4]
+#primer fila 
+part1 = [GS4,GS4,E4,B4, GS4,GS4,FS4,FS4,E4,E4,B4, GS4,GS4,FS4,FS4,E4,E4,B4, GS4,GS4,FS4,FS4,E4,E4,DS4, REST,E5,E5,FS5, [E5,GS5], B4]
 temp1 = [EN, 2.5,0.5, QN, EN,EN,EN,EN,EN,EN,QN, EN,EN,EN,EN,EN,EN,QN, EN,EN,EN,EN,EN,EN,2.5, EN,EN,EN,EN, HN,HN]
 
 #segunda fila
-part2 = [[ES5,G5],[ES5,G5],[ES5,G5],[ES5,A5],[ES5,G5],[ES5,FS5],ES5,
-           [ES5,G5],FS5, 
-           [DS5,G5],[DS5,G5],[DS5,G5],[DS5,A5],[DS5,G5],[DS5,FS5],ES5,
-           [ES5,G5],REST,FS5,
-           [ES5,G5],[ES5,G5],[ES5,G5],[ES5,A5],[ES5,G5],[ES5,FS5],ES5] 
+part2 = [[E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],ES5,
+           [E5,GS5],FS5, 
+           [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
+           [E5,GS5],REST,FS5,
+           [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5] 
 temp2 = [EN,EN,EN,QN,EN,EN,EN, HN,HN, EN,EN,EN,QN,EN,EN,EN, QN,QN,HN, EN,EN,EN,QN,EN,EN,EN]
 
 #Tercera fila
-part3 = [ES5, ES5,ES5,ES5,DS3,ES5,ES5,REST,ES5, REST,ES5,DS5,ES5,B4,A4,G4, REST,ES5,DS5,ES5,G4,G4,FS4,G4, REST,G4,G4,FS4,G4]
-temp3 = [WN, EN,EN,EN,EN,EN,EN,EN,EN, EN,EN,EN,QN,EN,EN,EN, EN,EN,EN,EN,EN,EN,EN,5.0, HN,EN,EN,EN,QN]
+part3 = [E5, 
+        E5,E5,E5,DS5,E5,E5,REST,E5,
+        REST,E5,DS5,E5,B4,A4,GS4, 
+        REST,E5,DS5,E5,GS4,GS4,FS4,GS4, 
+        REST,GS4,GS4,FS4,GS4]
+temp3 = [WN, 
+        EN,EN,EN,EN,EN,EN,EN,EN,
+        EN,EN,EN,QN,EN,EN,EN,
+        EN,EN,EN,EN,EN,EN,EN,4.5,
+        HN,EN,EN,EN,QN]
 
-frase.addNoteList(part1, temp1) # COMPAS 28 - 33
-fraseBajo.addNoteList(bajo6, bajo1_durations)
-frase.addNoteList(part2, temp2) #COMPAS 34-38
-frase.addNoteList(part3, temp3) # COMPAS 39 - 44
+# frase.addNoteList(part1, temp1) # COMPAS 28 - 33
+# frase.addNoteList(part2, temp2) #COMPAS 34-38
+# frase.addNoteList(part3, temp3) # COMPAS 39 - 44
 
-#se repite de primera hoja
-frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 11 (45)
-frase.addNoteList([E4, E4], [EN, 2.5])
+# #se repite de primera hoja
+# frase.addNote(REST, EN) # SILENCIO CORCHEA COMPAS 45
+# frase.addNoteList([E4, E4], [EN, 2.5])
 
-frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 12 (46)
-frase.addNoteList([E4, E4, FS4, DS4, GS4, A4, GS4, E4], [EN, EN, EN, HN, DQN, EN, QN, 3.5]) # COMPASES 12-14 (47-49)
+# frase.addNote(REST, HN) # SILENCIO BLANCA COMPAS 46
+# frase.addNoteList([E4, E4, FS4, DS4, GS4, A4, GS4, E4], [EN, EN, EN, HN, DQN, EN, QN, 3.5]) # COMPASES 47-48
 
-frase.addNote(REST, 4.0) # SILENCIO REDONDA COMPAS 15 (50)
-frase.addNoteList([REST, ES4,ES4,G4,G4,FS4,G4],[QN,EN,EN,EN,EN,EN, HN]) #COMPAS 51
+# frase.addNote(REST, 4.0) # SILENCIO REDONDA COMPAS 49
+frase.addNoteList([REST, E4,E4,GS4,GS4,FS4,GS4],[QN,EN,EN,EN,EN,EN, HN]) #COMPAS 50
 
 #QUINTA FILA
-frase.addNoteList([ES4,ES4],[DQN,QN]) #COMPAS 52
+frase.addNoteList([E4,E4],[DQN,QN]) #COMPAS 51
 for i in range(4):
-    frase.addNoteList([ES4],[EN]) #COMPAS 53 -54
-frase.addNoteList([G4,G4,FS4,G4, ES4],[EN,EN,EN, QN,3.5]) #COMPAS 53 -54
-
-frase.addNoteList([REST,ES4,ES4,FS4,DS4, DS4,ES4,B3,B3],[HN,EN,EN,EN,QN, EN,QN,EN,QN]) #COMPAS 55 - 56
-
-frase.addNoteList([A4,G4,FS4,ES4,ES4,FS4,G4],[EN,QN,DSN,SN,DEN,DSN, 2.5]) #COMPAS 57    
+   frase.addNoteList([E4],[EN]) #COMPAS 52
+frase.addNoteList([GS4,GS4,FS4,GS4, E4],[EN,EN,EN, QN,3.5]) #COMPAS 52 - 53
+frase.addNoteList([REST,E4,E4,FS4,DS4, DS4,E4,B3,B3],[HN,EN,EN,EN,QN, EN,QN,EN,QN]) #COMPAS 54 - 55
+frase.addNoteList([A4,GS4,FS4,E4,E4,FS4,GS4],[EN,QN,DSN,SN,DEN,DSN, 2.5]) #COMPAS 56
 
 #SEXTA FILA
-frase.addNoteList([FS4,ES4],[SN,DHN]) #COMPAS 58
-frase.addNoteList([REST],[4.5]) # SILENCIO REDONDA COMPAS 59 Y SILENCIO CORCHEA COMPAS 60
+frase.addNoteList([FS4,E4],[SN,DHN]) #COMPAS 57
+frase.addNoteList([REST],[4.5]) # SILENCIO REDONDA COMPAS 58 Y SILENCIO CORCHEA COMPAS 59
+
+for i in range(6): # 6 CORCEHAS E - COMPAS 59
+   frase.addNote(E4, EN)
+frase.addNote(FS4, EN) # COMPAS 59
+
+frase.addNoteList([GS4,GS4,REST],[EN,2.5,DQN]) # COMPAS 60
 
 for i in range(6): # 6 CORCEHAS E - COMPAS 60
-    frase.addNote(ES4, EN)
-frase.addNoteList([FS4], [EN]) # COMPAS 60
+   frase.addNote(E4, EN) 
+frase.addNoteList([FS4, GS4,GS4,E4,B4], [EN, EN,2.5,EN,QN])
 
-frase.addNoteList([GS4,GS4,REST],[EN,2.5,QN]) # COMPAS 61
+# ----- Mano Izquierda -----
+# **** COMPASES 28 - 33 ****
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo10, bajo10_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
 
-frase.addNoteList([REST],[EN]) # COMPAS 62
-for i in range(6): # 6 CORCEHAS E - COMPAS 60
-    frase.addNote(ES4, EN)
-frase.addNoteList([FS4], [EN])
+# # **** COMPASES 34 - 38 ****
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
 
-frase.addNoteList([GS4,GS4,ES4,B4],[EN,2.5,EN,QN])
-    
-#Mano Izquierda
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo10, bajo10_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
+# # **** COMPASES 39 - 44 ****
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo11, [WN])
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo12, bajo1_durations)
+# fraseBajo.addNoteList(bajo1, bajo1_durations)
+# fraseBajo.addNoteList(bajo1, bajo1_durations)
 
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo11, [WN])
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo12, bajo1_durations)
-fraseBajo.addNoteList(bajo1, bajo1_durations)
-fraseBajo.addNoteList(bajo1, bajo1_durations)
-fraseBajo.addNoteList(bajo2, bajo1_durations)
-fraseBajo.addNoteList(bajo2, bajo1_durations)
-fraseBajo.addNoteList(bajo3, bajo1_durations)
-fraseBajo.addNoteList(bajo3, bajo1_durations)
-fraseBajo.addNoteList(bajo4, bajo1_durations)
+# # **** COMPASES 45 - 50 ****
+# fraseBajo.addNoteList(bajo2, bajo1_durations)
+# fraseBajo.addNoteList(bajo2, bajo1_durations)
+# fraseBajo.addNoteList(bajo3, bajo1_durations)
+# fraseBajo.addNoteList(bajo3, bajo1_durations)
+#fraseBajo.addNoteList(bajo4, bajo1_durations)
 fraseBajo.addNoteList(bajo4, bajo1_durations)
 
+# **** COMPASES 51 - 56 ****
 fraseBajo.addNoteList(bajo9, bajo1_durations)
 fraseBajo.addNoteList(bajo9, bajo1_durations)
 fraseBajo.addNoteList(bajo6, bajo1_durations)
 fraseBajo.addNoteList(bajo6, bajo1_durations)
 fraseBajo.addNoteList(bajo13, bajo1_durations)
 fraseBajo.addNoteList(bajo7, bajo1_durations)
+
+# **** COMPASES 57 - 62 ****
 fraseBajo.addNoteList(bajo8, bajo1_durations)
 fraseBajo.addNoteList(bajo8, bajo1_durations)
 fraseBajo.addNoteList(bajo6, bajo1_durations)
@@ -211,145 +222,144 @@ fraseBajo.addNoteList(bajo8, bajo1_durations)
 fraseBajo.addNoteList(bajo9, bajo1_durations)
 fraseBajo.addNoteList(bajo7, bajo1_durations)
 
+# # --- Tercera página ---
+# #primera fila 
+# part4 = [GS4, GS4,FS4, FS4, E4, E4, B4, 
+#          GS4, GS4,FS4, FS4, E4, E4, B4,
+#          GS4, GS4,FS4, FS4, E4, E4, D4,
+#          REST, E5, E5,F5,
+#          [E5,GS5], B4,
+#          ]
+# temp4 = [EN, EN, EN, EN, EN, EN, QN,
+#          EN, EN, EN, EN, EN, EN, QN,
+#          EN, EN, EN, EN, EN, EN, DHN,
+#          EN,EN,EN,EN,
+#          HN, HN,
+#         ] 
+# frase.addNoteList(part4, temp4)
 
-# --- Tercera página ---
-#primera fila 
-part4 = [GS4, GS4,FS4, FS4, E4, E4, B4, 
-         GS4, GS4,FS4, FS4, E4, E4, B4,
-         GS4, GS4,FS4, FS4, E4, E4, D4,
-         REST, E5, E5,F5,
-         [E5,GS5], B4,
-         ]
-temp4 = [EN, EN, EN, EN, EN, EN, QN,
-         EN, EN, EN, EN, EN, EN, QN,
-         EN, EN, EN, EN, EN, EN, DHN,
-         EN,EN,EN,EN,
-         HN, HN,
-        ] 
-frase.addNoteList(part4, temp4)
+# #segunda fila
+# part5 = [[E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
+#            [E5,GS5],FS5, 
+#            [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
+#            [E5,GS5],REST,FS5,
+#            [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5] 
+# temp5 = [EN,EN,EN,QN,EN,EN,EN, 
+#          HN,HN, 
+#          EN,EN,EN,QN,EN,EN,EN, 
+#          QN,QN,HN, 
+#          EN,EN,EN,QN,EN,EN,2.5]
+# frase.addNoteList(part5, temp5)
 
-#segunda fila
-part5 = [[E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
-           [E5,GS5],FS5, 
-           [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
-           [E5,GS5],REST,FS5,
-           [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5] 
-temp5 = [EN,EN,EN,QN,EN,EN,EN, 
-         HN,HN, 
-         EN,EN,EN,QN,EN,EN,EN, 
-         QN,QN,HN, 
-         EN,EN,EN,QN,EN,EN,2.5]
-frase.addNoteList(part5, temp5)
+# #tercera fila
+# part6 = [REST, 
+#          REST, REST, E5,E5,FS5, 
+#          [E5,GS5], B4, 
+#          [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
+#          [E5,GS5], FS5, 
+#          [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5]
+# temp6 = [ HN,
+#          HN, EN, EN, EN, EN, 
+#          HN, HN,
+#          EN,EN,EN,QN,EN,EN,EN,
+#          HN, HN,
+#          EN,EN,EN,QN,EN,EN,EN]
+# frase.addNoteList(part6, temp6)
 
-#tercera fila
-part6 = [REST, 
-         REST, REST, E5,E5,FS5, 
-         [E5,GS5], B4, 
-         [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
-         [E5,GS5], FS5, 
-         [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5]
-temp6 = [ HN,
-         HN, EN, EN, EN, EN, 
-         HN, HN,
-         EN,EN,EN,QN,EN,EN,EN,
-         HN, HN,
-         EN,EN,EN,QN,EN,EN,EN]
-frase.addNoteList(part6, temp6)
+# # Cuarta fila
+# part7 = [[E5,GS5], REST, FS5,
+#          [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5,
+#          REST, 
+#          E5, E5, DS5, E5, E5,
+#          REST,
+#          E5, E5, DS5, E5, E5
+#         ]
+# temp7 = [QN, QN, HN,
+#          EN, EN, EN,QN,EN,EN,DHN,
+#          HN,
+#          EN,QN,QN,QN,EN,
+#          WN,
+#         EN,QN,QN,QN,EN
+#         ]
+# frase.addNoteList(part7, temp7)
 
-# Cuarta fila
-part7 = [[E5,GS5], REST, FS5,
-         [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5,
-         REST, 
-         E5, E5, DS5, E5, E5,
-         REST,
-         E5, E5, DS5, E5, E5
-        ]
-temp7 = [QN, QN, HN,
-         EN, EN, EN,QN,EN,EN,DHN,
-         HN,
-         EN,QN,QN,QN,EN,
-         WN,
-        EN,QN,QN,QN,EN
-        ]
-frase.addNoteList(part7, temp7)
+# # Quinta fila
+# part8 = [ REST,
+#          FS5,GS5,FS5,GS5,GS5,
+#          GS5, FS5, E5,
+#          REST,
+#          E5,E5,DS5,DS5,DS5,E5,B4,
+#          E5,E5,FS5,
+#          REST,E5,E5,FS5,
+#          ]
 
-# Quinta fila
-part8 = [ REST,
-         FS5,GS5,FS5,GS5,GS5,
-         GS5, FS5, E5,
-         REST,
-         E5,E5,DS5,DS5,DS5,E5,B4,
-         E5,E5,FS5,
-         REST,E5,E5,FS5,
-         ]
+# temp8 = [
+#         WN,
+#         EN, QN, QN, QN, EN,
+#         DQN, SN, QN,
+#         HN,
+#         EN, QN, EN,SN,SN,QN,HN,
+#         EN,DQN,2.5,
+#         EN,EN,EN,EN
+# ]
+# frase.addNoteList(part8, temp8)
 
-temp8 = [
-        WN,
-        EN, QN, QN, QN, EN,
-        DQN, SN, QN,
-        HN,
-        EN, QN, EN,SN,SN,QN,HN,
-        EN,DQN,2.5,
-        EN,EN,EN,EN
-]
-frase.addNoteList(part8, temp8)
+# # Sexta fila
+# part9 = [GS5, 
+#          B4,B4,B4,B4,
+#         [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
+#         [E5,GS5],FS5,
+#         [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
+#         [E5,GS5],REST,FS5]
 
-# Sexta fila
-part9 = [GS5, 
-         B4,B4,B4,B4,
-        [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],FS5,
-        [E5,GS5],FS5,
-        [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
-        [E5,GS5],REST,FS5]
+# temp9 = [HN,
+#          EN,EN,EN,EN,
+#          EN,EN,EN,QN,EN,EN,EN,
+#          HN,HN,
+#          EN,EN,EN,QN,EN,EN,EN,
+#          EN,QN,HN
+#         ]
+# frase.addNoteList(part9, temp9)
 
-temp9 = [HN,
-         EN,EN,EN,EN,
-         EN,EN,EN,QN,EN,EN,EN,
-         HN,HN,
-         EN,EN,EN,QN,EN,EN,EN,
-         EN,QN,HN
-        ]
-frase.addNoteList(part9, temp9)
+# # Mano Izquierda
+# fraseBajo.addNoteList(bajo6, bajo1_durations) 
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo14, bajo10_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
 
-# Mano Izquierda
-fraseBajo.addNoteList(bajo6, bajo1_durations) 
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo14, bajo10_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
 
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo15, bajo10_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
 
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo15, bajo10_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
 
-fraseBajo.addNoteList(bajo6, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo8, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
 
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo8, bajo1_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo9, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo7, bajo1_durations)
-fraseBajo.addNoteList(bajo6, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo9, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo7, bajo1_durations)
+# fraseBajo.addNoteList(bajo6, bajo1_durations)
 
 # Crear una Part y Score para reproducir
 part = Part("Melodía", PIANO, 0)
