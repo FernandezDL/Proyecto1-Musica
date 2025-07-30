@@ -16,7 +16,7 @@ part1 = [GS4,GS4,E4,B4,
         GS4,GS4,FS4,FS4,E4,E4,DS4, 
         REST,E5,E5,FS5, 
         [E5,GS5], B4]
-part2 = [[E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],ES5,
+part2 = [[E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5,
            [E5,GS5],FS5, 
            [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
            [E5,GS5],REST,FS5,
@@ -108,14 +108,14 @@ temp6 = [ HN,
           HN, HN,
           EN,EN,EN,QN,EN,EN,EN]
 temp7 = [QN, QN, HN,
-         EN, EN, EN,QN,EN,EN,DHN,
+         EN, EN, EN,QN,EN,EN,2.5,
          HN,
          EN,QN,QN,QN,EN,
          WN,
         EN,QN,QN,QN,EN]  
 temp8 = [WN,
         EN, QN, DEN, SN, QN, EN,
-        DQN, SN, QN,
+        DEN, SN, QN,
         HN,
         EN, QN, EN,SN,SN,QN,HN,
         EN,DQN,2.5,
@@ -347,13 +347,78 @@ fraseBajo.addNoteList(bajo7, bajo1_durations)
 fraseBajo.addNoteList(bajo6, bajo1_durations)
 
 # --- Cuarta página ---
-#for i in range(3):
-#   frase.addNoteChord([E5,GS5], EN)
+for i in range(3):
+  frase.addChord([E5,GS5], EN)
 
-#frase.addNoteList([[E5, A5], [E5, GS5], [E5, FS5], E5, REST, E5, E5, FS5], [QN, EN, EN, 2.5, 4.5, EN, EN, EN]) # COMPAS 96 -98
-#frase.addNoteList([[E5, GS5], B4, [E5, GS5], [E5, GS5], [E5, GS5], [E5, A5], [E5, GS5], [E5, FS5], FS5, [E5, GS5], FS5], [HN, HN, EN, EN, EN, QN, EN, EN, EN,HN, HN]) # COMPAS 99 - 101
+part10 = [[E5, A5], [E5, GS5], [E5, FS5], E5,
+          REST, E5, E5, FS5,
+          [E5, GS5], B4,
+          [E5, GS5], [E5, GS5], [E5, GS5], [E5, A5], [E5, GS5], [E5, FS5], FS5,
+          [E5, GS5], FS5]
+temp10 = [QN, EN, EN, 2.5,
+          4.5, EN, EN, EN,
+          HN, HN,
+          EN, EN, EN, QN, EN, EN, EN,
+          HN, HN]
+frase.addNoteList(part10, temp10) # COMPAS 96 - 101
 
- 
+for i in range(3):
+  frase.addChord([E5,GS5], EN)
+
+part11 = [[E5, A5], [E5, GS5], [E5, FS5], E5,
+          [E5, GS5], REST, FS5,
+          [E5, GS5], [E5, GS5], [E5, GS5], [E5, A5], [E5, GS5], [E5, FS5], FS5,
+          E5, FS5,
+          REST, E4, E4, E4, GS4, GS4]
+temp11= [QN, EN, EN, EN,
+         QN, QN, HN,
+         EN, EN, EN, QN, EN, EN, EN,
+         DHN, QN,
+         DQN, EN, EN, EN, EN, 4.5]
+frase.addNoteList(part11, temp11) # COMPAS 102 - 107
+
+part12 = [GS4, GS4, GS4, A4, GS4, FS4, E4]
+temp12 = [EN, EN, EN, QN, EN, EN, EN]
+for i in range(2):
+        frase.addNoteList(part12, temp12) # COMPAS 108 y 110
+        frase.addNoteList([GS4, FS4], [HN, HN]) # COMPAS 109 y 111
+
+frase.addNoteList(part12, temp12) # COMPAS 112
+frase.addNote(E4, WN) # COMPAS 113
+
+part13 = [E4, E4, DS4, E4, E4, E4, REST]
+temp13 = [EN, QN, EN, EN, QN, 4.5, WN]
+frase.addNoteList(part13, temp13) # COMPAS 114 - 116
+
+# ----- Mano Izquierda -----
+# COMPASES 96 - 101
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+fraseBajo.addNoteList(bajo10, bajo10_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+
+# COMPASES 102 - 107
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo4, bajo1_durations)
+fraseBajo.addNoteList(bajo4, bajo1_durations) 
+fraseBajo.addChord([E3, B3], WN) # COMPAS 107
+
+# COMPASES 108 - 113
+fraseBajo.addChord([E3, B3], WN) # COMPAS 108
+fraseBajo.addNoteList(bajo7, bajo1_durations) # COMPAS 109
+fraseBajo.addNoteList(bajo7, bajo1_durations) # COMPAS 110
+fraseBajo.addNoteList(bajo2, bajo1_durations) # COMPAS 111
+fraseBajo.addNoteList(bajo2, bajo1_durations) # COMPAS 112
+fraseBajo.addNoteList(bajo2, bajo1_durations) # COMPAS 113
+
+# Compases 114-116
+fraseBajo.addChord([A2, E3, A3], WN) # COMPAS 114
+fraseBajo.addNote(REST, 8.0) # COMPAS 115 y 116
+
 # Crear una Part y Score para reproducir
 part = Part("Melodía", PIANO, 0)
 part.addPhrase(frase)
