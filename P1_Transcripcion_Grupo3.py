@@ -129,6 +129,11 @@ temp9 = [HN,
          
 frase = Phrase()
 fraseBajo = Phrase() 
+fraseViolin = Phrase()
+fraseViolin2 = Phrase()
+fraseViolin3 = Phrase()
+fraseViolin4= Phrase()
+frasePercusion = Phrase()
 
 # ----- Mano Derecha -----
 for i in range(7):
@@ -432,11 +437,6 @@ violinNotes2    = [acordeB, acordeE, acordeB, acordeCSm, acordeA, acordeE]
 violinNotes3    = [acordeCSm, acordeA, acordeE, acordeB, acordeCSm, acordeA, acordeE]
 violinNotes4    = [acordeCSm, acordeA, acordeE, acordeB, acordeCSm, acordeA, acordeE, acordeB, acordeCSm]
 
-fraseViolin = Phrase()
-fraseViolin2 = Phrase()
-fraseViolin3 = Phrase()
-fraseViolin4= Phrase()
-
 fraseViolin.addNoteList(violinNotes, [8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0], [40] * len(violinNotes)) # COMPAS 1 - 14
 fraseViolin2.addNoteList(violinNotes2, [4.0, 8.0, 8.0, 8.0, 8.0, 8.0], [40]* len(violinNotes2))
 fraseViolin3.addNoteList(violinNotes3, [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0], [40] * len(violinNotes3))
@@ -446,7 +446,21 @@ fraseViolin2.setStartTime(124.0)
 fraseViolin3.setStartTime(232.0)
 fraseViolin4.setStartTime(380.0)
 
-# Crear una Part y Score para reproducir
+# Ritmo de balada: bombo (35) en el primer tiempo, caja (38) en el tercer tiempo, hi-hat cerrado (42) en todos los tiempos
+percusion_pattern = []
+percusion_durations = []
+
+# 32 compases, cada uno con 4 tiempos
+for _ in range(32):
+   percusion_pattern.extend([35, 42, 38, 42])  # bombo, hi-hat, caja, hi-hat
+   percusion_durations.extend([QN, QN, QN, QN])
+
+frasePercusion.addNoteList(percusion_pattern, percusion_durations, [50] * len(percusion_pattern))
+
+# Crear Part de percusión (canal 9 es estándar para percusión en MIDI)
+partPercusion = Part("Percusión", 0, 9)
+partPercusion.addPhrase(frasePercusion)
+
 part = Part("Melodía", PIANO, 0)
 part.addPhrase(frase)
  
@@ -465,9 +479,10 @@ score = Score("Photograph", 108.0)  # tempo: 140 bpm
 score.addPart(part)
 score.addPart(partBajo)
 score.addPart(partViolin)
+score.addPart(partPercusion)
 
 # Reproducir
 Play.midi(score)
-Write.midi(score, "Proyecto_1.mid")
+Write.midi(score, "P1_Transcripcion_Grupo3.mid")
 
 print("Se ha creado el archivo")
