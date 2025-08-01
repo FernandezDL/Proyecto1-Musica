@@ -419,6 +419,33 @@ fraseBajo.addNoteList(bajo2, bajo1_durations) # COMPAS 113
 fraseBajo.addChord([A2, E3, A3], WN) # COMPAS 114
 fraseBajo.addNote(REST, 8.0) # COMPAS 115 y 116
 
+# ***** Violin *****
+acordeE = [E5, B4, GS4]
+acordeB = [B4, FS4, DS5]
+acordeCSm = [E5, CS5, B4]
+acordeA = [A4, E4, CS5]
+
+violinNotes= [acordeE, acordeCSm, 
+             acordeB, acordeA, acordeE,
+             acordeCSm, acordeB]
+violinNotes2    = [acordeB, acordeE, acordeB, acordeCSm, acordeA, acordeE]
+violinNotes3    = [acordeCSm, acordeA, acordeE, acordeB, acordeCSm, acordeA, acordeE]
+violinNotes4    = [acordeCSm, acordeA, acordeE, acordeB, acordeCSm, acordeA, acordeE, acordeB, acordeCSm]
+
+fraseViolin = Phrase()
+fraseViolin2 = Phrase()
+fraseViolin3 = Phrase()
+fraseViolin4= Phrase()
+
+fraseViolin.addNoteList(violinNotes, [8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0], [40] * len(violinNotes)) # COMPAS 1 - 14
+fraseViolin2.addNoteList(violinNotes2, [4.0, 8.0, 8.0, 8.0, 8.0, 8.0], [40]* len(violinNotes2))
+fraseViolin3.addNoteList(violinNotes3, [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0], [40] * len(violinNotes3))
+fraseViolin4.addNoteList(violinNotes4, [4.0,8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 32.0], [40] * len(violinNotes4))
+
+fraseViolin2.setStartTime(124.0)
+fraseViolin3.setStartTime(232.0)
+fraseViolin4.setStartTime(380.0)
+
 # Crear una Part y Score para reproducir
 part = Part("Melodía", PIANO, 0)
 part.addPhrase(frase)
@@ -427,9 +454,17 @@ part.addPhrase(frase)
 partBajo = Part("Bajo", PIANO, 1)
 partBajo.addPhrase(fraseBajo)
 
+# Violin
+partViolin = Part("Violin", VIOLIN, 2)
+partViolin.addPhrase(fraseViolin)
+partViolin.addPhrase(fraseViolin2)
+partViolin.addPhrase(fraseViolin3)
+partViolin.addPhrase(fraseViolin4)
+
 score = Score("Photograph", 108.0)  # tempo: 140 bpm
 score.addPart(part)
 score.addPart(partBajo)
+score.addPart(partViolin)
 
 # Reproducir
 Play.midi(score)
