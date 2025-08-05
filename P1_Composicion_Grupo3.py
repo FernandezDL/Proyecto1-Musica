@@ -179,6 +179,40 @@ for chord, dur in closure_bass:
     fraseBajo.addChord(chord, dur)
 
 # ————————————————
+# Violin
+# ————————————————
+
+acordeE = [E5, B4, GS4]
+acordeB = [B4, FS4, DS5]
+acordeCSm = [E5, CS5, B4]
+
+acordeA = [A4, E4, CS5]
+
+violinNotes= [acordeE, acordeCSm, 
+             acordeB, acordeA, acordeE,
+             acordeCSm, acordeB]
+fraseViolin = Phrase()
+fraseViolin.addNoteList(violinNotes, [8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0], [40] * len(violinNotes))
+fraseViolin.addNoteList(violinNotes, [8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0], [40] * len(violinNotes))
+fraseViolin.addNoteList(violinNotes, [8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0], [40] * len(violinNotes))
+# ————————————————
+# Bateria
+# ————————————————
+
+frasePercusion = Phrase()
+
+percusion_pattern = []
+percusion_durations = []
+
+for _ in range(32):
+   percusion_pattern.extend([35, 42, 38, 42])  # bombo, hi-hat, caja, hi-hat
+   percusion_durations.extend([QN, QN, QN, QN])
+
+frasePercusion.addNoteList(percusion_pattern, percusion_durations, [50] * len(percusion_pattern))
+
+partPercusion = Part("Percusión", 0, 9)
+partPercusion.addPhrase(frasePercusion)
+# ————————————————
 # Creación de la Part y el Score
 # ————————————————
 
@@ -188,9 +222,14 @@ partMelodia.addPhrase(frase)
 partBajo = Part("BajoNuevo", PIANO, 1)
 partBajo.addPhrase(fraseBajo)
 
+partViolin = Part("Violin", VIOLIN, 2)
+partViolin.addPhrase(fraseViolin)
+
 score = Score("CanciónNueva_8Compases", 100.0)  # tempo 100 bpm
 score.addPart(partMelodia)
 score.addPart(partBajo)
+score.addPart(partViolin)
+score.addPart(partPercusion)
 
 # ————————————————
 # Reproducción y escritura de MIDI
