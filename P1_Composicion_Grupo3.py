@@ -45,6 +45,28 @@ melody2_notes = [
     (C5, QN), (D5, HN), 
 ]
 
+part2 = [[E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5,
+           [E5,GS5],FS5, 
+           [DS5,GS5],[DS5,GS5],[DS5,GS5],[DS5,A5],[DS5,GS5],[DS5,FS5],E5,
+           [E5,GS5],REST,FS5,
+           [E5,GS5],[E5,GS5],[E5,GS5],[E5,A5],[E5,GS5],[E5,FS5],E5,
+           E5] 
+
+temp2 = [EN,EN,EN,QN,EN,EN,EN, HN,HN, EN,EN,EN,QN,EN,EN,EN, QN,QN,HN, EN,EN,EN,QN,EN,EN,EN, WN]
+
+closure_melody = [
+    # Compás 17
+    (G4, QN), (E4, QN), (D4, QN), (C4, QN),
+    # Compás 18
+    (E4, QN), (D4, QN), (C4, HN),
+    # Compás 19
+    (REST, WN),
+    # Compás 20
+    (C4, QN), (E4, QN), (G4, QN), (C5, QN),
+    # Compás 21
+    (C5, WN)
+]
+
 # Acompañamiento de bajo (una nota/grupo por compás)
 bass_chords = [
     ([C3, G3], HN),  
@@ -73,6 +95,25 @@ bass_chords2 = [
     ([C3, G3], WN)
 ]
 
+bajo6 = [[CS3, CS2], [CS4, GS3], [CS4, GS3]]
+bajo7 = [[B1, B2], [B3, FS3], [B3, FS3]]
+bajo8 = [[A1, A2], [B3, E3], [B3, E3]]
+bajo9 = [[E3, E2], [B3, GS3], [B3, GS3]]
+bajo1_durations = [DQN, DQN, QN]
+
+closure_bass = [
+    # Compás 17
+    ([C2, G2], WN),
+    # Compás 18
+    ([F2, C3], WN),
+    # Compás 19
+    ([C2, G2], WN),
+    # Compás 20
+    ([C2, G2], WN),
+    # Compás 21
+    ([C2, E2, G2], WN)
+]
+
 
 # ————————————————
 # Construcción de las frases
@@ -86,11 +127,23 @@ for note, dur in melody_notes:
     
 for i in range(3):
     frase.addNoteList(arpegio1, arpegio1_durations)
+
+for note, dur in melody_notes:
+    frase.addNote(note, dur)
+
+frase.addNoteList(part2, temp2)
     
 for note, dur in melody2_notes:
     frase.addNote(note, dur)
-    
+
+frase.addNoteList(part2, temp2)    
  
+for note, dur in closure_melody:
+    frase.addNote(note, dur)
+# ————————————————
+# Construcción de la frase de bajo
+# ————————————————
+
 
 fraseBajo = Phrase()
 for i in range(7):
@@ -102,7 +155,27 @@ for chord, dur in bass_chords:
 for i in range(3):
    fraseBajo.addNote(E2, WN)
    
+for chord, dur in bass_chords:
+    fraseBajo.addChord(chord, dur)
+
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+  
 for chord, dur in bass_chords2:
+    fraseBajo.addChord(chord, dur)
+
+fraseBajo.addNoteList(bajo9, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo7, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo6, bajo1_durations)
+fraseBajo.addNoteList(bajo8, bajo1_durations)
+
+for chord, dur in closure_bass:
     fraseBajo.addChord(chord, dur)
 
 # ————————————————
