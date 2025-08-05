@@ -123,6 +123,5 @@ score.addPart(partBajo)
 # Reproducción y escritura de MIDI
 # ————————————————
 Play.midi(score)
-Write.midi(score, "composicion.mid")
+Write.midi(score, "P1_Composicion_Grupo3.mid")
 
-print("MIDI generado: composicion.mid")

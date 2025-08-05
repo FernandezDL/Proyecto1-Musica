@@ -6,6 +6,15 @@
 # Daniel Esteban Morales Urizar - 21785
 # Karen Jimena Hernández Ordoñez - 21199
 
+"""
+Créditos de la partitura:
+  - Título: Photograph
+  - Autor original: Ed Sheeran
+  - Subido a Musescore.com por: dianaferbandez31@gmail.com
+  - Descargado: Jul 25, 2025 02:09 UTC
+  - Fuente: https://musescore.com/
+"""
+
 from music import *
 
 # Notas
